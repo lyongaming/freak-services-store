@@ -1,12 +1,14 @@
 import React from 'react';
 import { SquaresBackground } from './SquaresBackground';
 
+import "./style.css";
+import "./cardClient.css";
+
 export const StoreApp = () => {
 
     return (
         <>
-
-            {/* <section>
+            <section>
                 <div className="deck">
                     <h3>User Register</h3>
                     <div className="hand">
@@ -19,7 +21,7 @@ export const StoreApp = () => {
                         </div>
                     </div>
                 </div>
-            </section> */}
+            </section>
             
             <SquaresBackground />
         </>
