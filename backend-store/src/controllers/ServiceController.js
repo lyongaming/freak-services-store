@@ -1,8 +1,10 @@
 const { response } = require("express");
+const { getServiceByName } = require("../models/ServiceModel");
 
-const getService = (req, res = response) => {
+const getService = async(req, res = response) => {
 
-    console.log("Mensaje totalmente profesional, por supuesto que no escribi qlo antes")
+    const { service_name } = req.params;
+    await getServiceByName(service_name, res);
 
 };
 

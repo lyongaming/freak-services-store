@@ -1,0 +1,3 @@
+{
+    "getServiceByName": "SELECT service_name, service_cost FROM services WHERE service_name LIKE $1;"
+}

@@ -11,6 +11,6 @@ app.use(express.json());
 
 app.use("/services", serviceRoutes);
 
-const PORT = process.env.PORT;
+const PORT = process.env.SERVER_PORT;
 
 app.listen(PORT, () => console.log(`Connected to port ${PORT}`));
