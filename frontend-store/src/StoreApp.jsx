@@ -1,23 +1,18 @@
 import React from 'react';
-import { SquaresBackground } from './SquaresBackground';
-import { UserCard } from './UserCard';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import { LoginPage } from "./pages/LoginPage";
 
 import "./style.css";
-import "./cardClient.css";
 
 export const StoreApp = () => {
 
     return (
-        <>
-            <section>
-                <div className="deck">
-                    <h3>User Register</h3>
-                    <UserCard />   
-                </div>
-            </section>
-            
-            <SquaresBackground />
-        </>
+        <Router>
+            <Routes>
+                <Route path='/login' element={ <LoginPage /> } />
+            </Routes>
+        </Router>
     );
 
 }

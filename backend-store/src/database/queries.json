@@ -1,4 +1,4 @@
 {
     "getServiceByName": "SELECT service_name, service_cost FROM services WHERE service_name LIKE $1;",
-    "getUsersNames": "SELECT user_name FROM users;"
+    "getUsersNames": "SELECT user_id, user_name FROM users;"
 }
