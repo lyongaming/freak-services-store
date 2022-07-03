@@ -1,0 +1,97 @@
+.wrapper{
+    margin-top: -35%;
+    margin-left: 50%;
+    max-width: 500px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    padding: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.wrapper header{
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.wrapper .inputField{
+    display: flex;
+    height: 45px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.inputField input{
+    width: 80%;
+    background: none;
+    color: #fff;
+    height: 100%;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    border-radius: 3px;
+    padding-left: 15px;
+}
+
+.inputField button{
+    width: 60px;
+    height: 100%;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.inputField button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper .allList{
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.allList li{
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    background: linear-gradient(45deg, #ffffff 0%, #ffffff00 100%);
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+}
+
+.allList li span{
+    position: absolute;
+    right: -45px;
+    color: #fff;
+    width: 45px;
+    text-align: center;
+    background: #e74c3c;
+    border-radius: 0 3px 3px 0;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+.allList li:hover span{
+    right: 0px;
+}
+
+.wrapper .footer{
+    display: flex;
+    width: 100%;
+    color: #fff;
+    align-items: center;
+    margin-top: 16px;
+    justify-content: space-between;
+}
+
+
+.allList::-webkit-scrollbar{
+ display: none;
+}
+
