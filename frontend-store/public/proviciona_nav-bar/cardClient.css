@@ -112,8 +112,8 @@ h3{
     .deck{
         position: fixed;
         min-width: 350px;
-        min-height: 300px;
-        height: 400px;
+        min-height: 200px;
+        height: 300px;
         background: rgba(255, 255, 255, 0.1);
         box-shadow: 0 25px 45px rgb(0, 0, 0, 0.1);
         border: 1px solid rgba(255, 255, 255, 0.5);
@@ -129,7 +129,7 @@ h3{
     h3{
         font-size: 2em;
         position:relative;
-        margin-top: -45%;
+        margin-top: -32%;
         color: #fff;
         margin-bottom: 20px;
     }
