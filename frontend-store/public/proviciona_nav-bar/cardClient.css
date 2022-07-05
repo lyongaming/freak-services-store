@@ -1,7 +1,7 @@
 .newbody{
-    z-index: -1;
+    margin-top: 10%;
     position: relative;
-    min-height: 100vh;
+    min-height: 80vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@
 h3{
     font-size: 2em;
     position:relative;
-    margin-top: -45%;
+    margin-top: -42%;
     color: #fff;
     margin-bottom: 20px;
 }
@@ -106,4 +106,33 @@ h3{
 
 .deck .hand:hover .content h4{
     color: #333;
+}
+
+@media (max-height: 700px){
+    .deck{
+        position: fixed;
+        min-width: 350px;
+        min-height: 300px;
+        height: 400px;
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 25px 45px rgb(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        z-index: 10;
+        padding: 20px;
+       overflow: scroll;
+        backdrop-filter: blur(25px);
+    }
+
+    h3{
+        font-size: 2em;
+        position:relative;
+        margin-top: -45%;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    
+    
 }
