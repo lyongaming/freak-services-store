@@ -35,6 +35,18 @@
     padding-left: 15px;
 }
 
+.inputField button{
+    width: 60px;
+    height: 100%;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.inputField button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
 .wrapper .allList{
     max-height: 250px;
     overflow-y: auto;
@@ -80,11 +92,6 @@
 
 
 .allList::-webkit-scrollbar{
-    width: 7px;
-    background: rgba(255, 255, 255, .2);;
+ display: none;
 }
 
-.allList::-webkit-scrollbar-thumb{
-    background: rgb(121, 217, 241);
-    border-radius: 10px;
-}
