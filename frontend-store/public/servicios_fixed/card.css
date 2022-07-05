@@ -99,3 +99,16 @@
     text-decoration: none;
     transition: 00.5s;
 }
+
+
+@media (max-height: 490px){
+    .container .cards{
+        position: fixed;
+        width: 250px;
+        height: 350px;
+        background: linear-gradient(rgba(255, 255, 255, 0.05),rgb(170, 177, 231));
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+}

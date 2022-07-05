@@ -94,3 +94,10 @@
  display: none;
 }
 
+@media (max-height: 490px){
+    .wrapper .allList{
+        max-height: 150px;
+        overflow-y: auto;
+    }
+    
+}
