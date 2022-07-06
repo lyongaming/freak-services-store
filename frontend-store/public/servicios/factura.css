@@ -64,7 +64,6 @@
     padding: 3rem 2rem 2rem;
     border-radius: 1rem 1rem 0 0;
     transition: all .3s;
-
     transform: rotateX(65deg) scale(.75) translateY(10%);
     transform-origin: 50% 100% ;
 }
@@ -147,3 +146,22 @@
     overflow: hidden;
 }
 
+@media (max-height: 490px){
+    .modal_img{
+        width: 150px;
+        margin-bottom: 0.75rem;
+        
+    }
+    .modal__content{
+
+        aspect-ratio: 4/3;
+    }
+
+    .modal__content .allList{
+        padding: 5px;
+        max-height: 150px;
+        overflow-y: auto;
+    }
+    
+    
+}

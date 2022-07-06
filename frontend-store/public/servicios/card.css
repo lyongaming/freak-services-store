@@ -1,14 +1,13 @@
 .container{
     position: relative;
     display: flex;
-    margin-top: 10%;
     margin-left: 15%;
 }
 
 .container .cards{
-    position: relative;
-    width: 300px;
-    height: 500px;
+    position: fixed;
+    width: 350px;
+    height: 600px;
     background: linear-gradient(rgba(255, 255, 255, 0.05),rgb(170, 177, 231));
     border-radius: 20px;
     overflow: hidden;
@@ -98,4 +97,17 @@
     color: #fff;
     text-decoration: none;
     transition: 00.5s;
+}
+
+
+@media (max-height: 490px){
+    .container .cards{
+        position: fixed;
+        width: 250px;
+        height: 350px;
+        background: linear-gradient(rgba(255, 255, 255, 0.05),rgb(170, 177, 231));
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
 }
