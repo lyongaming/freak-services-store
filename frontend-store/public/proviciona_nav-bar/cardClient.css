@@ -1,4 +1,4 @@
-.newbody{
+.newbody {
     margin-top: 10%;
     position: relative;
     min-height: 80vh;
@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.deck{
+.deck {
     position: fixed;
     min-width: 350px;
     min-height: 400px;
@@ -19,9 +19,8 @@
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
-    z-index: 10;
     padding: 20px;
-   overflow: scroll;
+    overflow: scroll;
     backdrop-filter: blur(25px);
 }
 
@@ -29,18 +28,18 @@
     display: none;
 }
 
-h3{
+h3 {
     font-size: 2em;
-    position:relative;
+    position: relative;
     margin-top: -42%;
     color: #fff;
     margin-bottom: 20px;
 }
 
-.deck .hand{
+.deck .hand {
     position: relative;
     display: flex;
-    padding: 10px ;
+    padding: 10px;
     background: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin: 10px 0;
@@ -48,7 +47,7 @@ h3{
     transition: 0.5s;
     overflow: hidden;
 }
-.deck .hand:hover{
+.deck .hand:hover {
     background: #fff;
     overflow: visible;
     box-shadow: -15px 30px 50px rgba(0, 0, 0, 0.5);
@@ -56,7 +55,7 @@ h3{
     z-index: 1000;
 }
 
-.deck .hand .userCard{
+.deck .hand .userCard {
     position: relative;
     width: 60px;
     height: 60px;
@@ -65,7 +64,7 @@ h3{
     margin-right: 10px;
 }
 
-.deck .hand .userCard img{
+.deck .hand .userCard img {
     position: absolute;
     top: 0;
     left: 0;
@@ -74,14 +73,14 @@ h3{
     object-fit: cover;
 }
 
-.deck .hand .content{
+.deck .hand .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: #fff;
 }
 
-.deck .hand .content .rank{
+.deck .hand .content .rank {
     position: absolute;
     right: -50px;
     color: #03a9f4;
@@ -89,27 +88,27 @@ h3{
     font-size: 2em;
 }
 
-.deck .hand .content .rank small{
+.deck .hand .content .rank small {
     font-weight: 500;
     opacity: 0.25;
 }
 
-.deck .hand:hover .content .rank{
+.deck .hand:hover .content .rank {
     right: 20px;
 }
 
-.deck .hand .content h4{
+.deck .hand .content h4 {
     line-height: 1.2em;
     font-weight: 600;
     transition: 0.5s;
 }
 
-.deck .hand:hover .content h4{
+.deck .hand:hover .content h4 {
     color: #333;
 }
 
-@media (max-height: 700px){
-    .deck{
+@media (max-height: 700px) {
+    .deck {
         position: fixed;
         min-width: 350px;
         min-height: 200px;
@@ -122,17 +121,15 @@ h3{
         border-radius: 10px;
         z-index: 10;
         padding: 20px;
-       overflow: scroll;
+        overflow: scroll;
         backdrop-filter: blur(25px);
     }
 
-    h3{
+    h3 {
         font-size: 2em;
-        position:relative;
+        position: relative;
         margin-top: -32%;
         color: #fff;
         margin-bottom: 20px;
     }
-    
-    
 }
