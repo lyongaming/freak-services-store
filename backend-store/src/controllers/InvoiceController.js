@@ -1,5 +1,7 @@
 const { response } = require("express");
 
+const { newInvoice } = require("../models/InvoiceModel");
+
 const getInvoices = (req, res = response) => {
     const invoices = [
         {
@@ -17,8 +19,7 @@ const getInvoices = (req, res = response) => {
 }
 
 const createInvoice = (req, res = response) => {
-    const invoice = req.body;
-    res.status(201).json(invoice);
+    newInvoice({...req.body}, res);
 }
 
 module.exports = {
