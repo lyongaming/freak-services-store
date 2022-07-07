@@ -34,14 +34,4 @@
     font-size: 40px;
     transform: escale(2);
     color: rgb(57, 245, 82);
-}
-
-.footer .deleteAll{
-    opacity: 0.6;
-    pointer-events: none;
-}
-
-.footer .deleteAll.active{
-    opacity: 1;
-    pointer-events: auto;
-}
+   }

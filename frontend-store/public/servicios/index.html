@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="formservice.css">
     <link rel="stylesheet" href="buttom.css">
     <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="factura.css">
 </head>
 <body>
     <div class="container">
@@ -33,29 +34,52 @@
     <div class="wrapper">
         <header>form servis</header>
         <div class="inputField">
-            <input type="text" placeholder="service">
-            <button ><i class="fas fa-plus"></i></button>
+            <input type="text" list="services" placeholder="service">
+            <datalist id="services">
+                <option value="Xbox Game Pass"></option>
+                <option value="Play Station +"></option>
+                <option value="Club Fortnite"></option>
+                <option value="Netflix"></option>
+                <option value="Amazon prime"></option>
+                <option value="Ninstendo switch online"></option>
+            </datalist>
+            <button><i class="fas fa-plus"></i></button>
         </div>
         <ul class="allList">
-            <li>alalalalalllalala  <span><i class="fas fa-trash"></i></span> </li>
-            <li>qwertqewweorieiuyee  <span><i class="fas fa-trash"></i></span> </li>
-            <li>akjakakjsyhwwnwnbwgwasasd  <span><i class="fas fa-trash"></i></span> </li>
-            <li>sjaskakak  span><i class="fas fa-trash"></i></span> </li>
-            <li>alalalalalllalala  <span><i class="fas fa-trash"></i></span> </li>
-            <li>qwertqewweorieiuyee  <span><i class="fas fa-trash"></i></span> </li>
-            <li>akjakakjsyhwwnwnbwgwasasd  <span><i class="fas fa-trash"></i></span> </li>
-            <li>sjaskakak  <span><i class="fas fa-trash"></i></span> </li><li>alalalalalllalala  <span><i class="fas fa-trash"></i></span> </li>
-            <li>qwertqewweorieiuyee  <span><i class="fas fa-trash"></i></span> </li>
-            <li>akjakakjsyhwwnwnbwgwasasd  <span><i class="fas fa-trash"></i></span> </li>
-            <li>sjaskakak  <span><i class="fas fa-trash"></i></span> </li>
+            <!--Data comes from local storage-->
         </ul>
         <div class="footer">
-            <span>you have 4 contracted services</span>
-            <button style="--clr:rgb(16, 124, 248);"><i class="fa-solid fa-cart-shopping"></i></button>
-            <button style="--clr:#e74c3c;"><i class="fas fa-trash"></i></button>
+            <button style="--clr:rgb(16, 124, 248);"  class="modal__button" id="open-modal"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button class="deleteAll" style="--clr:#e74c3c;"><i class="fas fa-trash"></i></button>
         </div>
     </div>
+    <section class="modal modal-containerr">
+        <div class="modal-container" id="modal-container">
+            <div class="modal__content">
+
+                <img src="logo.png" class="modal_img">
+
+                <h1 class="modal__title">Service Selected</h1>
+                <h1 class="modal__title">500$</h1>
+                <div class="mostrador">
+                <ul class="allList">
+                    <!--Data comes from local storage-->
+                </ul>
+                </div>
+                
+                <button class="modal__button modal__button-width">
+                    shop confirmed
+                </button>
+                <button class="modal__button-link close-modal">
+                    Cancel process
+                </button>
+            </div>
+        </div>
+    </section>
         <ul class="squares"></ul>
+
+<script src="formservice.js"></script>        
+<script src="factura.js"></script>
 <script src="background.js"></script>
 </body>
 </html>
