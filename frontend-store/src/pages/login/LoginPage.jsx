@@ -1,9 +1,6 @@
 import React from 'react';
-import { SquaresBackground } from '../SquaresBackground';
-import { UserCard } from '../components/UserCard';
-import { useFetch } from "../hooks/useFetch";
-
-import "../style.css";
+import { UserCard } from '../../components';
+import { useFetch } from "../../hooks";
 
 export const LoginPage = () => {
 
@@ -22,8 +19,6 @@ export const LoginPage = () => {
                     }
                 </div>
             </section>
-            
-            <SquaresBackground />
         </>
     );
 
