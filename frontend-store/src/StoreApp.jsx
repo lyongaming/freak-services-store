@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Navbar } from "./components";
 import { SquaresBackground } from "./hocs/SquaresBackground";
 
 import { LandingPage, LoginPage, ServicesPage, NotFound } from "./pages";
@@ -9,11 +10,14 @@ import "./style.css";
 export const StoreApp = () => {
   return (
     <Router>
+
+
       <Routes>
         <Route
           path="/"
           element={
             <SquaresBackground>
+              <Navbar />
               <LandingPage />
             </SquaresBackground>
           }
@@ -22,6 +26,7 @@ export const StoreApp = () => {
           path="/login"
           element={
             <SquaresBackground>
+              <Navbar />
               <LoginPage />
             </SquaresBackground>
           }
@@ -30,6 +35,7 @@ export const StoreApp = () => {
           path="/services"
           element={
             <SquaresBackground>
+              <Navbar />
               <ServicesPage />
             </SquaresBackground>
           }
@@ -37,9 +43,7 @@ export const StoreApp = () => {
         <Route
           path="*"
           element={
-            <SquaresBackground>
-              <NotFound />
-            </SquaresBackground>
+            <NotFound />
           }
         />
       </Routes>

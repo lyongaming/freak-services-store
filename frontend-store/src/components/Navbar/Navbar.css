@@ -1,34 +1,37 @@
 .nav-bar {
-    margin-top: 0;
     list-style: none;
-    width: 30%;
+    width: 40%;
     height: 45px;
-    padding: 5px;
+    padding: 10px;
     justify-content: space-between;
-    position: relative;
-  }
-  
-  .nav-bar li {
+}
+
+.nav-bar li {
     width: 25%;
     float: right;
     text-align: center;
     height: 100%;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+}
+
+.link {
     line-height: 25px;
     text-transform: uppercase;
     color: #fff;
     font-weight: bold;
     font-size: 14px;
     letter-spacing: 1px;
-    cursor: pointer;
-    border-radius: 25px;
+    text-decoration: none;
     transition: all 0.5s ease;
-  }
+}
 
- 
-  .nav-bar li:hover {
-    color: rgb(28, 28, 29);
+.nav-bar li:hover {
     background: #ffffff;
     transform: scale(1.2);
-  }
+}
 
-    
+.link:hover {
+    color: rgb(28, 28, 29);
+}
