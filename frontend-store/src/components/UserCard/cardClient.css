@@ -63,14 +63,14 @@ section{
     object-fit: cover;
 }
 
-.deck .hand .content{
+.deck .hand .user-content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: #fff;
 }
 
-.deck .hand .content .rank{
+.deck .hand .user-content .rank{
     position: absolute;
     right: -50px;
     color: #03a9f4;
@@ -78,21 +78,21 @@ section{
     font-size: 2em;
 }
 
-.deck .hand .content .rank small{
+.deck .hand .user-content .rank small{
     font-weight: 500;
     opacity: 0.25;
 }
 
-.deck .hand:hover .content .rank{
+.deck .hand:hover .user-content .rank{
     right: 20px;
 }
 
-.deck .hand .content h4{
+.deck .hand .user-content h4{
     line-height: 1.2em;
     font-weight: 600;
     transition: 0.5s;
 }
 
-.deck .hand:hover .content h4{
+.deck .hand:hover .user-content h4{
     color: #333;
 }

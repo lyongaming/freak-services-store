@@ -14,7 +14,7 @@ export const UserCard = ({ name }) => {
         <div className="userCard">
         <img src="leon no sleep.jpg" alt={ name } />
       </div>
-      <div className="content">
+      <div className="user-content">
         <h2 className="rank">
           <small onClick={ redirectToServices }> &gt;&gt; </small>
         </h2>
