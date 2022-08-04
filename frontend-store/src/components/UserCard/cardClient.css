@@ -8,9 +8,10 @@ section{
 }
 
 .deck{
-    position: relative;
+    position: fixed;
     min-width: 350px;
     min-height: 400px;
+    height: 550px;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 25px 45px rgb(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -19,7 +20,12 @@ section{
     border-radius: 10px;
     z-index: 10;
     padding: 20px;
+    overflow: scroll;
     backdrop-filter: blur(25px);
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .deck h3{
@@ -41,7 +47,7 @@ section{
 .deck .hand:hover{
     background: #fff;
     box-shadow: -15px 30px 50px rgba(0, 0, 0, 0.5);
-    transform: scale(1.15) translateX(30px) translateY(-15px);
+    transform: scale(1.1);
     z-index: 1000;
 }
 
