@@ -4,7 +4,7 @@ import { useFetch } from "../../hooks";
 
 export const LoginPage = () => {
 
-    let { data: users } = useFetch("http://localhost:8090/users");
+    let { data: users } = useFetch("http://localhost:8080/users");
     users = users ? users : [];
 
     return (
