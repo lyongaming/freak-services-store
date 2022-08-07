@@ -79,7 +79,7 @@ section{
 .deck .hand .user-content .rank{
     position: absolute;
     right: -50px;
-    color: #03a9f4;
+    color: #052fbb;
     transition: 0.5s;
     font-size: 2em;
 }

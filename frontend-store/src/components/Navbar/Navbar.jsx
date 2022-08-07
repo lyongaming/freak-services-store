@@ -7,7 +7,7 @@ export const Navbar = () => {
   return (
     <header>
       <nav>
-          <ul class="nav-bar">
+          <ul className="nav-bar">
               <li><NavLink to="/" className={({ isActive }) => 
                 isActive ? "link active" : "link"
               }>home</NavLink></li>
