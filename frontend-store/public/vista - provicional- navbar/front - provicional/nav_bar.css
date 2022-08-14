@@ -1,0 +1,29 @@
+.nav-bar {
+  list-style: none;
+  width: 40%;
+  height: 45px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.nav-bar li {
+  width: 25%;
+  float: right;
+  text-align: center;
+  height: 100%;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.5s ease;
+}
+
+.nav-bar li:hover {
+  color: rgb(28, 28, 29);
+  background: #ffffff;
+  transform: scale(1.2);
+}

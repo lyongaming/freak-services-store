@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 
 import "./background.css";
 
-export const SquaresBackground = () => {
+export const SquaresBackground = ({ children }) => {
   const backgroundRef = useRef();
 
   useEffect(() => {
@@ -35,5 +35,10 @@ export const SquaresBackground = () => {
     }
   }, []);
 
-  return <ul className="squares" ref={backgroundRef}></ul>;
+  return (
+    <>
+      { children }
+      <ul className="squares" ref={backgroundRef}></ul>;
+    </>
+  );
 };

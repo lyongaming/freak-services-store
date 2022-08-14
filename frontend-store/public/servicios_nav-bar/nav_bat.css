@@ -1,15 +1,19 @@
 .nav-bar {
-    margin-top: 0;
+    margin-top: -10%;
     list-style: none;
-    width: 30%;
+    width: 60%;
     height: 45px;
-    padding: 5px;
+    padding: 10px;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
+  }
+
+.nav-bar ul{
+margin: 10px;
   }
   
   .nav-bar li {
-    width: 25%;
+    width: 15%;
     float: right;
     text-align: center;
     height: 100%;
@@ -30,5 +34,3 @@
     background: #ffffff;
     transform: scale(1.2);
   }
-
-    

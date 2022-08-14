@@ -1,13 +1,10 @@
 import React from 'react';
-import { SquaresBackground } from '../SquaresBackground';
-import { UserCard } from '../components/UserCard';
-import { useFetch } from "../hooks/useFetch";
-
-import "../style.css";
+import { UserCard } from '../../components';
+import { useFetch } from "../../hooks";
 
 export const LoginPage = () => {
 
-    let { data: users } = useFetch("http://localhost:8090/users");
+    let { data: users } = useFetch("http://localhost:8080/users");
     users = users ? users : [];
 
     return (
@@ -22,8 +19,6 @@ export const LoginPage = () => {
                     }
                 </div>
             </section>
-            
-            <SquaresBackground />
         </>
     );
 

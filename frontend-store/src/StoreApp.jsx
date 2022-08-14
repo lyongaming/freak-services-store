@@ -1,21 +1,52 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { PageBackground } from './hocs/PageBackground';
+import { Navbar } from "./components";
+import { SquaresBackground } from "./hocs/SquaresBackground";
 
-import { LoginPage } from "./pages/LoginPage";
-import { ServicesPage } from "./pages/ServicesPage";
+import { LandingPage, LoginPage, ServicesPage, NotFound } from "./pages";
 
 import "./style.css";
 
 export const StoreApp = () => {
+  return (
+    <Router>
 
-    return (
-        <Router>
-            <Routes>
-                <Route path='/login' element={ <PageBackground><LoginPage /></PageBackground> } />
-                <Route path='/services' element={ <PageBackground><ServicesPage /></PageBackground> } />
-            </Routes>
-        </Router>
-    );
 
-}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <SquaresBackground>
+              <Navbar />
+              <LandingPage />
+            </SquaresBackground>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <SquaresBackground>
+              <Navbar />
+              <LoginPage />
+            </SquaresBackground>
+          }
+        />
+        <Route
+          path="/services"
+          element={
+            <SquaresBackground>
+              <Navbar />
+              <ServicesPage />
+            </SquaresBackground>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <NotFound />
+          }
+        />
+      </Routes>
+    </Router>
+  );
+};
