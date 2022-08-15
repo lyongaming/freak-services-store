@@ -101,8 +101,8 @@
 }
 
 
-@media (max-height: 490px){
-    .container .cards{
+@media (max-height: 700px){
+    .container .cards {
         position: fixed;
         width: 250px;
         height: 350px;

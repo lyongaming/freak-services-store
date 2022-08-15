@@ -2,7 +2,7 @@
     margin-left: 1rem;
     margin-right: 1rem;
     position: fixed;
-    z-index: 3;
+    z-index: 2000;
 }
 
 .modal__button{
@@ -153,7 +153,6 @@
         
     }
     .modal__content{
-<<<<<<< HEAD:frontend-store/public/servicios_fixed/factura.css
         margin: auto;
         width: 400px;
         border-radius: 1.25rem;
@@ -165,10 +164,7 @@
         transition: all .3s;
         transform: rotateX(65deg) scale(.75) translateY(10%);
         transform-origin: 50% 100%;
-=======
-
         aspect-ratio: 4/3;
->>>>>>> main:frontend-store/public/servicios_nav-bar/factura.css
     }
 
     .modal__content .allList{

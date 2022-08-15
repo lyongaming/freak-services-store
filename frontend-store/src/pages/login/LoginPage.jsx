@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserCard } from '../../components';
+import { UserOption } from '../../components';
 import { useFetch } from "../../hooks";
 
 export const LoginPage = () => {
@@ -14,7 +14,7 @@ export const LoginPage = () => {
                     <h3>User Register</h3>
                     {
                         users.map(user => (
-                            <UserCard key={ user.id } name={ user.name } />
+                            <UserOption key={ user.id } name={ user.name } />
                         ))
                     }
                 </div>

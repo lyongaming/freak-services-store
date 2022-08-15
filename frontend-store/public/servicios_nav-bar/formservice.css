@@ -94,6 +94,9 @@
  display: none;
 }
 
+<<<<<<< HEAD:frontend-store/public/servicios_fixed/formservice.css
+@media (max-height: 700px) {
+=======
 @media (max-height: 700px){
     .wrapper{
         margin-left: 50%;
@@ -110,5 +113,23 @@
         max-height: 270px;
         overflow-y: auto;
     }
+>>>>>>> main:frontend-store/public/servicios_nav-bar/formservice.css
     
+    .wrapper {
+        margin-left: 50%;
+        max-width: 400px;
+        width: 100%;
+        background-color: rgba(255,255,255, 0.05);
+        border-radius: 5px;
+        padding: 25px;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(5px);
+    }
+
+    .wrapper .allList {
+        max-height: 270px;
+        overflow-y: auto;
+    }   
+
 }
