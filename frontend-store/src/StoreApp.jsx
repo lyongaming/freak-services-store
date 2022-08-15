@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components";
 import { SquaresBackground } from "./hocs/SquaresBackground";
 
-import { LandingPage, LoginPage, ServicesPage, InvoicesPage, NotFound } from "./pages";
+import { LandingPage, LoginPage, ServicesPage, InvoicesPage, NotFound, HistorialPage } from "./pages";
 
 import "./style.css";
 
@@ -45,6 +45,15 @@ export const StoreApp = () => {
             <SquaresBackground>
               <Navbar />
               <InvoicesPage />
+            </SquaresBackground>
+          }
+        />
+        <Route
+          path="/historial"
+          element={
+            <SquaresBackground>
+              <Navbar />
+              <HistorialPage />
             </SquaresBackground>
           }
         />
