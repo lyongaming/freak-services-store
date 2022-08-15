@@ -3,14 +3,13 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components";
 import { SquaresBackground } from "./hocs/SquaresBackground";
 
-import { LandingPage, LoginPage, ServicesPage, NotFound } from "./pages";
+import { LandingPage, LoginPage, ServicesPage, InvoicesPage, NotFound } from "./pages";
 
 import "./style.css";
 
 export const StoreApp = () => {
   return (
     <Router>
-
 
       <Routes>
         <Route
@@ -37,6 +36,15 @@ export const StoreApp = () => {
             <SquaresBackground>
               <Navbar />
               <ServicesPage />
+            </SquaresBackground>
+          }
+        />
+        <Route
+          path="/invoices"
+          element={
+            <SquaresBackground>
+              <Navbar />
+              <InvoicesPage />
             </SquaresBackground>
           }
         />
