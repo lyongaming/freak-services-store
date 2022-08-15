@@ -32,8 +32,8 @@ export const ServicesPage = () => {
           </button>
         </div>
         <ul className="allList">
-          <li>alalalalalllalala  <span><i className="fas fa-trash"></i></span> </li>
-          <li>alalalalalllalala  <span><i className="fas fa-trash"></i></span> </li>
+          {/* <li>alalalalalllalala  <span><i className="fas fa-trash"></i></span> </li> */}
+          {/* <li>alalalalalllalala  <span><i className="fas fa-trash"></i></span> </li> */}
         </ul>
         <div className="footer">
             <button style={ { "--clr": "rgb(16,124,248)" } } className="modal__button" id="open-modal"><FontAwesomeIcon icon={ faShoppingCart } /></button>
