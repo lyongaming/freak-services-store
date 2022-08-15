@@ -1,6 +1,6 @@
 import React from "react";
 
-import { UserCard, ServicesForm } from "../../components";
+import { UserCard, ServicesForm, InvoiceModal } from "../../components";
 
 import "./ServicePage.css";
 
@@ -11,6 +11,7 @@ export const ServicesPage = () => {
         <UserCard />
       </div>
       <ServicesForm />
+      <InvoiceModal />
     </>
   );
 };
