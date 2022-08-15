@@ -1,0 +1,5 @@
+.service-page_container {
+    position: relative;
+    display: flex;
+    margin-left: 15%;
+}

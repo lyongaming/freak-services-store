@@ -2,7 +2,7 @@ import React from "react";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-import "./error.css";
+import "./NotFound.css";
 
 export const NotFound = () => {
 
@@ -19,8 +19,8 @@ export const NotFound = () => {
   }
 
   return (
-    <div id="container" ref={ backgroundRef } onMouseMove={ moveBackground }>
-      <div class="content">
+    <div id="not-found_container" ref={ backgroundRef } onMouseMove={ moveBackground }>
+      <div className="not_found-content">
         <h2>404</h2>
         <h4>Opps! page not found</h4>
         <p>
