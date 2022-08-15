@@ -1,4 +1,4 @@
-.inputField button{
+.inputField button {
     justify-content: center;
     justify-items: center;
     width: 50px;
@@ -13,13 +13,13 @@
     transition: 0.5s;
 }
 
-.inputField button:hover{
- font-size: 40px;
- transform: rotate(180deg);
- color: rgb(57, 245, 82);
+.inputField button:hover {
+    font-size: 40px;
+    transform: rotate(180deg);
+    color: rgb(57, 245, 82);
 }
 
-.footer button{
+.footer button {
     border: none;
     outline: none;
     background: var(--clr);
@@ -30,8 +30,7 @@
     transition: 0.5s;
 }
 
-.footer button:hover{
+.footer button:hover {
     font-size: 40px;
-    transform: escale(2);
     color: rgb(57, 245, 82);
-   }
+}

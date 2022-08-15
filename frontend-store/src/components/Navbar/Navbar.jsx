@@ -5,7 +5,7 @@ import "./Navbar.css";
 
 export const Navbar = () => {
   return (
-    <header>
+    <header className="navbar-header">
       <nav>
           <ul className="nav-bar">
               <li><NavLink to="/" className={({ isActive }) => 
