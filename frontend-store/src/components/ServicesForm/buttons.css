@@ -19,7 +19,7 @@
     color: rgb(57, 245, 82);
 }
 
-.footer button {
+.service-form_buttons button {
     border: none;
     outline: none;
     background: var(--clr);
@@ -30,7 +30,7 @@
     transition: 0.5s;
 }
 
-.footer button:hover {
+.service-form_buttons button:hover {
     font-size: 40px;
     color: rgb(57, 245, 82);
 }

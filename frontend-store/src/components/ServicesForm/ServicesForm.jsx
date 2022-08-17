@@ -1,13 +1,13 @@
 import React from "react";
 
-import "./buttom.css";
-import "./formservice.css";
+import "./buttons.css";
+import "./ServicesForm.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faShoppingCart, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 export const ServicesForm = () => {
   return (
-    <div className="wrapper">
+    <div className="service-form">
       <header>Services</header>
       <div className="inputField">
         <input type="text" list="services" placeholder="service" />
@@ -23,11 +23,11 @@ export const ServicesForm = () => {
           <FontAwesomeIcon icon={faPlus} />
         </button>
       </div>
-      <ul className="allList">
+      <ul className="added-services">
         {/* <li>alalalalalllalala  <span><i className="fas fa-trash"></i></span> </li> */}
         {/* <li>alalalalalllalala  <span><i className="fas fa-trash"></i></span> </li> */}
       </ul>
-      <div className="footer">
+      <div className="service-form_buttons">
         <button
           style={{ "--clr": "rgb(16,124,248)" }}
           className="modal__button"
