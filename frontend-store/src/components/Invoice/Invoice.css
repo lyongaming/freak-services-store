@@ -1,4 +1,4 @@
-.card{
+.invoice-card{
     display: flex;
     position: relative;
     flex-direction: column;
@@ -12,15 +12,15 @@
     transition: 0.2s;
 }
 
-.card:hover{
+.invoice-card:hover{
     transform: translateY(-1rem);
 }
 
-.card:hover~.card{
+.invoice-card:hover~.invoice-card{
     transform: translateX(130px);
 }
 
-.card:not(:first-child){
+.invoice-card:not(:first-child){
     margin-left: -130px;
 }
 

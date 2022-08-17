@@ -9,9 +9,9 @@ import { InvoiceButtons } from "./InvoiceButtons/InvoiceButtons";
 
 export const Invoice = () => {
   return (
-    <article className="card">
+    <article className="invoice-card">
       <header className="card-header">
-        <p>invoice</p>
+        <p>Invoice</p>
       </header>
       <PurchasedServices />
       <UserInfo />

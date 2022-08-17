@@ -1,0 +1,175 @@
+.historial-page {
+    margin: 60px auto;
+    max-width: 900px;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    padding: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.historial-page header{
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.historial-page_search-input{
+    display: flex;
+    height: 45px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.historial-page_search-input input{
+    width: 80%;
+    background: none;
+    color: #fff;
+    height: 100%;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    border-radius: 3px;
+    padding-left: 15px;
+}
+
+.order-by {
+    position: relative;
+    display: flex;
+    width: 10em;
+    height: 3em;
+    line-height: 3;
+    background: #4d81f1;
+    overflow: hidden;
+    border-radius: .25em;
+}
+
+.order-by::after{
+    content: '\25BC';
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 1em;
+    background: #4d81f1;
+    cursor: pointer;
+    pointer-events: none;
+    transition:.25s all ease;
+}
+
+.order-by:hover:after{
+   color: #ffffff; 
+}
+
+.order-by select{
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0;
+    background: rgba(255, 255, 255, 0.5);
+    background-image: none;
+    flex: 1;
+    padding: 0 .5em;
+    color: #000;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.order-by select::-ms-expand{
+    display: none;
+}
+
+.purchases {
+    overflow: scroll;
+    color: #fff;
+    margin-bottom: 20px;
+    height: 300px;
+}
+
+.purchases .purchase-info {
+    position: relative;
+    display: flex;
+    padding: 10px ;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.purchases .purchase-info:hover{
+    background: #fff;
+    box-shadow: -15px 30px 50px rgba(0, 0, 0, 0.05);
+}
+
+.purchases .purchase-info .imgBx{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.purchases .purchase-info .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.purchases .purchase-info .content ul{
+    display: flex;
+    width: 100%;
+}
+
+.purchases .purchase-info .content li{
+    margin-left: 50px;
+    list-style: none;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+}
+
+.purchases .purchase-info:hover .content li{
+    color: #000;
+    transform: scale(1.2);
+}
+
+
+
+.purchases .columns-names {
+    padding-left: 35px;
+    width: 90%;
+}
+
+.purchases .columns-names ul{
+    display: flex;
+    width: 100%;
+}
+
+.purchases .columns-names li{
+    margin-left: 100px;
+    margin-right: 0;
+    list-style: none;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar{
+     display: none;
+}
