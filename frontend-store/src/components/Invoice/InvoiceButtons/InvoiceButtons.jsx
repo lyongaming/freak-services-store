@@ -10,7 +10,6 @@ export const InvoiceButtons = () => {
     <div className="footer">
       <button
         style={{ "--clr": "rgb(16, 124, 248)" }}
-        className="modal__button"
         id="open-modal"
       >
         <FontAwesomeIcon icon={faCheckDouble} />

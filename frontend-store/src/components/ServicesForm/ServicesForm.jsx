@@ -24,13 +24,12 @@ export const ServicesForm = () => {
         </button>
       </div>
       <ul className="added-services">
-        {/* <li>alalalalalllalala  <span><i className="fas fa-trash"></i></span> </li> */}
+        <li>alalalalalllalala  <span><i className="fas fa-trash"></i></span> </li>
         {/* <li>alalalalalllalala  <span><i className="fas fa-trash"></i></span> </li> */}
       </ul>
       <div className="service-form_buttons">
         <button
           style={{ "--clr": "rgb(16,124,248)" }}
-          className="modal__button"
           id="open-modal"
         >
           <FontAwesomeIcon icon={faShoppingCart} />

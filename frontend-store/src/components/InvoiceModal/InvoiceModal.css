@@ -1,14 +1,11 @@
-.modal-containerr{
+.modal {
+    height: 100vh; 
+    display: grid;
+    place-items: center;
     margin-left: 1rem;
     margin-right: 1rem;
     position: fixed;
     z-index: 2000;
-}
-
-.modal__button{
-    cursor: pointer;
-    border: none;
-    outline: none;
 }
 
 .modal_img{
@@ -16,14 +13,9 @@
     height: auto;
 }
 
-.modal{
-   height: 100vh; 
-   display: grid;
-   place-items: center;
- 
-}
-
 .modal .modal__button{
+    margin-top: 20px;
+    width: 90%;
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.7);
     color: #fff;
@@ -95,11 +87,6 @@
     margin-bottom: 1.5rem;
 }
 
-.modal__button-width{
-    margin-top: 20px;
-    width: 90%;
-}
-
 .modal__button-link{
     cursor: pointer;
     border: none;
@@ -119,19 +106,18 @@
     transform: rotateX(0) scale(1) translateY(0);
 }
 
-.mostrador{
-    
-    border-radius: 4px ;
+.selected-services{
+    border-radius: 4px;
     border: solid 4px rgba(255, 255, 255, 0.26);
 }
 
-.modal__content .allList{
+.modal__content .selected-services{
     padding: 5px;
     max-height: 250px;
     overflow-y: auto;
 }
   
-.modal__content .mostrador .allList li{
+.modal__content .selected-services_container .selected-services li{
     pointer-events: none;
     list-style: none;
     height: 45px;
@@ -166,7 +152,7 @@
         aspect-ratio: 4/3;
     }
 
-    .modal__content .allList{
+    .modal__content .selected-services{
         padding: 5px;
         max-height: 150px;
         overflow-y: auto;
