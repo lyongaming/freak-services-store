@@ -4,6 +4,8 @@ import { UserSelection } from "./UserSelection/UserSelection";
 import { Navbar } from "./Navbar/Navbar";
 import { InvoiceModal } from "./InvoiceModal/InvoiceModal";
 import { Invoice } from "./Invoice/Invoice";
+import { PurchaseInfo } from "./PurchaseInfo/PurchaseInfo";
+import { SearchPurchases } from "./SearchPurchases/SearchPurchases";
 
 export {
     Invoice,
@@ -11,5 +13,7 @@ export {
     UserCard,
     UserSelection,
     Navbar,
-    InvoiceModal
+    InvoiceModal,
+    PurchaseInfo,
+    SearchPurchases
 }

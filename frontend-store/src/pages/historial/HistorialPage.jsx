@@ -1,5 +1,7 @@
 import React from "react";
 
+import { PurchaseInfo, SearchPurchases } from "../../components";
+
 import "./HistorialPage.css";
 
 export const HistorialPage = () => {
@@ -7,18 +9,7 @@ export const HistorialPage = () => {
     <>
       <div className="historial-page">
         <header>Record</header>
-        <div className="historial-page_search-input">
-          <input type="format" placeholder="search" />
-          <div className="order-by">
-            <select name="format" id="format">
-              <option selected disabled>
-                order by
-              </option>
-              <option value="date">date</option>
-              <option value="more buy">more buy</option>
-            </select>
-          </div>
-        </div>
+        <SearchPurchases />  
 
         <div className="purchases">
           <div className="columns-names">
@@ -30,20 +21,7 @@ export const HistorialPage = () => {
               <li>contract</li>
             </ul>
           </div>
-          <div className="purchase-info">
-            <div className="imgBx">
-              <img src="leon no sleep.jpg" />
-            </div>
-            <div className="content">
-              <ul className="slot">
-                <li>the lion</li>
-                <li>xxx-xxx-xxx</li>
-                <li>********@gmail.com</li>
-                <li>0000$</li>
-                <li>zzzzzzzzzzzzzzzzzzzzzzzzzzzzz</li>
-              </ul>
-            </div>
-          </div>
+          <PurchaseInfo />
         </div>
       </div>
     </>
