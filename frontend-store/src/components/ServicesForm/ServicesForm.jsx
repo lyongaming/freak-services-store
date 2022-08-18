@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import { Services } from "./Services/Services";
+
 import { useFetch } from "../../hooks";
 
 import "./buttons.css";
@@ -28,14 +30,7 @@ export const ServicesForm = () => {
       <header>Services</header>
       <div className="inputField">
         <input type="text" list="services" value={ input } onChange={ changeInput } placeholder="service" />
-        <datalist id="services">
-          <option value="Xbox Game Pass"></option>
-          <option value="Play Station +"></option>
-          <option value="Club Fortnite"></option>
-          <option value="Netflix"></option>
-          <option value="Amazon prime"></option>
-          <option value="Ninstendo switch online"></option>
-        </datalist>
+        <Services />
         <button className={ input ? "active" : "" }>
           <FontAwesomeIcon icon={faPlus} />
         </button>
