@@ -19,7 +19,6 @@ export const useFetch = url => {
         fetch(url)
             .then(resp => resp.json())
             .then(data => {
-                console.log(data);
                 if(isMounted.current) {
                     setState({ error: null, data });
                 }

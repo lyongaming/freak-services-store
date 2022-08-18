@@ -3,19 +3,25 @@ import { useFetch } from "../../../hooks";
 
 export const Services = () => {
 
-    let { data: services, error } = useFetch("http://localhost:8080/services");
+    const { data, error } = useFetch("http://localhost:8080/services");
+    
+    let services = data;
+    services = services ? services : [];
+
+    // if (services) {
+    //     console.log(services);
+    //     localStorage.setItem("services", services);
+    // }
 
     if(error) {
         alert(error);
     }
 
-    services = services ? services : [];
-
     return (
         <datalist id="services">
             {
                 services.map(service => (
-                    <option value={ service.service_name } ></option>
+                    <option key={ service.service_id } value={ service.service_name } ></option>
                 ))
             }
         </datalist>

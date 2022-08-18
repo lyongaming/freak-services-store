@@ -10,19 +10,22 @@ import "./ServicesForm.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faShoppingCart, faTrash } from "@fortawesome/free-solid-svg-icons";
 
-export const ServicesForm = () => {
+export const ServicesForm = ({ services, setServices }) => {
 
   const [input, setInput] = useState("");
 
-  const { data, error } = useFetch(`http://localhost:8080/services/${input}`);
-
-  useEffect(() => {
-    console.log(data ? data : []);
-  }, [input]);
-  
   const changeInput = e => {
-    e.preventDefault();
     setInput(e.target.value);
+  }
+
+  const addService = async(e) => {
+    e.preventDefault();
+
+    if(input) {
+      const response = await fetch(`http://localhost:8080/services/${input}`)
+      const service = await response.json();
+      setServices([...services, service]);
+    }
   }
 
   return (
@@ -31,13 +34,16 @@ export const ServicesForm = () => {
       <div className="inputField">
         <input type="text" list="services" value={ input } onChange={ changeInput } placeholder="service" />
         <Services />
-        <button className={ input ? "active" : "" }>
+        <button className={ input ? "active" : "" } onClick={ addService } >
           <FontAwesomeIcon icon={faPlus} />
         </button>
       </div>
       <ul className="added-services">
-        <li>alalalalalllalala  <span><FontAwesomeIcon icon={ faTrash } /></span> </li>
-        {/* <li>alalalalalllalala  <span><i className="fas fa-trash"></i></span> </li> */}
+        {
+          services.map(service => {
+            return <li key={ service.service_id } >{ service.service_name }<span><FontAwesomeIcon icon={ faTrash } /></span></li>
+          })
+        }
       </ul>
       <div className="service-form_buttons">
         <button
