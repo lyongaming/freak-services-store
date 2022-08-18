@@ -1,16 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
+import { useFetch } from "../../hooks";
 
 import "./buttons.css";
 import "./ServicesForm.css";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faShoppingCart, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 export const ServicesForm = () => {
+
+  const [input, setInput] = useState("");
+
+  const { data, error } = useFetch(`http://localhost:8080/services/${input}`);
+
+  useEffect(() => {
+    console.log(data ? data : []);
+  }, [input]);
+  
+  const changeInput = e => {
+    e.preventDefault();
+    setInput(e.target.value);
+  }
+
   return (
     <div className="service-form">
       <header>Services</header>
       <div className="inputField">
-        <input type="text" list="services" placeholder="service" />
+        <input type="text" list="services" value={ input } onChange={ changeInput } placeholder="service" />
         <datalist id="services">
           <option value="Xbox Game Pass"></option>
           <option value="Play Station +"></option>
@@ -19,12 +36,12 @@ export const ServicesForm = () => {
           <option value="Amazon prime"></option>
           <option value="Ninstendo switch online"></option>
         </datalist>
-        <button>
+        <button className={ input ? "active" : "" }>
           <FontAwesomeIcon icon={faPlus} />
         </button>
       </div>
       <ul className="added-services">
-        <li>alalalalalllalala  <span><i className="fas fa-trash"></i></span> </li>
+        <li>alalalalalllalala  <span><FontAwesomeIcon icon={ faTrash } /></span> </li>
         {/* <li>alalalalalllalala  <span><i className="fas fa-trash"></i></span> </li> */}
       </ul>
       <div className="service-form_buttons">

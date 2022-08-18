@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 export const useFetch = url => {
     
     const isMounted = useRef(true);
-    const [state, setState] = useState({ data: null, loading: true, error: null });
+    const [state, setState] = useState({ data: null, error: null });
 
     useEffect(() => {
 
@@ -15,16 +15,16 @@ export const useFetch = url => {
     
     useEffect(() => {
 
-        setState({ data: null, loading: true, error: null });
-
+        setState({ data: null, error: null });
         fetch(url)
             .then(resp => resp.json())
             .then(data => {
+                console.log(data);
                 if(isMounted.current) {
-                    setState({ loading: false, error: null, data });
+                    setState({ error: null, data });
                 }
             })
-            .catch(() => setState({ data: null, loading: false, error: "Couldn't load the info" }))
+            .catch(() => setState({ data: null, error: "Couldn't load the info" }))
 
     }, [url])
 

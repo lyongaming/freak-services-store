@@ -1,4 +1,6 @@
 .inputField button {
+    opacity: 0.6;
+    pointer-events: none;
     justify-content: center;
     justify-items: center;
     width: 50px;
@@ -17,6 +19,11 @@
     font-size: 40px;
     transform: rotate(180deg);
     color: rgb(57, 245, 82);
+}
+
+.inputField button.active{
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .service-form_buttons button {
