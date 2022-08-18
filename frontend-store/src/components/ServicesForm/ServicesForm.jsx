@@ -30,11 +30,16 @@ export const ServicesForm = ({ cart, setCart }) => {
     }
   }
 
-  const removeService = async(id) => {
+  const removeService = id => {
     let currentCart = [...cart];
     currentCart = currentCart.filter(service => service.service_id !== id);
     setCart(currentCart);
     localStorage.setItem("cart", JSON.stringify(currentCart));
+  }
+
+  const clearCart = () => {
+    setCart([]);
+    localStorage.setItem("cart", JSON.stringify([]));
   }
 
   return (
@@ -68,7 +73,7 @@ export const ServicesForm = ({ cart, setCart }) => {
         >
           <FontAwesomeIcon icon={faShoppingCart} />
         </button>
-        <button className="deleteAll" style={{ "--clr": "#e74c3c" }}>
+        <button className="deleteAll" style={{ "--clr": "#e74c3c" }} onClick={ clearCart } >
           <FontAwesomeIcon icon={faTrash} />
         </button>
       </div>
