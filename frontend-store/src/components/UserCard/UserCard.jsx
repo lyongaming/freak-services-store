@@ -10,7 +10,11 @@ import "./UserCard.css";
 
 export const UserCard = () => {
 
-  const { user } = useContext(UserContext);
+  let { user } = useContext(UserContext);
+
+  if(localStorage.getItem("user")) {
+    user = JSON.parse(localStorage.getItem("user"));
+  }
 
   return (
     <div className="cards">
