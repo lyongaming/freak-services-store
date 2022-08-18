@@ -16,6 +16,7 @@ export const UserOption = ({ name }) => {
     const response = await fetch(`http://localhost:8080/users/${name}`);
     const data = await response.json();
     const user = {
+      id: data.user_id,
       name: data.user_name,
       phone: data.user_phone,
       email: data.user_email

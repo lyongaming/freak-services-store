@@ -3,6 +3,6 @@
     "getServiceByName": "SELECT service_id, service_name, service_cost FROM services WHERE service_name = $1;",
     "getUsersNames": "SELECT user_id, user_name FROM users;",
     "getUserId": "SELECT user_id FROM users WHERE user_name = $1",
-    "getUser": "SELECT user_name, user_phone, user_email FROM users WHERE user_name = $1;",
+    "getUser": "SELECT user_id, user_name, user_phone, user_email FROM users WHERE user_name = $1;",
     "createInvoice": "INSERT INTO invoices (invoice_services, invoice_amount, invoice_status, user_id) VALUES ($1, $2, $3, $4)"
 }
