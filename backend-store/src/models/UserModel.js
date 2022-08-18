@@ -17,6 +17,15 @@ const getUserNames = async(response) => {
 
 };
 
+const getUserByName = async(name, response) => {
+
+    await db.query(queries.getUser, [`${name}`], (err, res) => {
+        response.json(res.rows[0]);
+    });
+
+}
+
 module.exports = {
-    getUserNames
+    getUserNames,
+    getUserByName
 }
