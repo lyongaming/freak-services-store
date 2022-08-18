@@ -2,15 +2,13 @@ import React, { useState, useEffect } from "react";
 
 import { Services } from "./Services/Services";
 
-import { useFetch } from "../../hooks";
-
 import "./buttons.css";
 import "./ServicesForm.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faShoppingCart, faTrash } from "@fortawesome/free-solid-svg-icons";
 
-export const ServicesForm = ({ services, setServices }) => {
+export const ServicesForm = ({ cart, setCart }) => {
 
   const [input, setInput] = useState("");
 
@@ -24,7 +22,8 @@ export const ServicesForm = ({ services, setServices }) => {
     if(input) {
       const response = await fetch(`http://localhost:8080/services/${input}`)
       const service = await response.json();
-      setServices([...services, service]);
+      setCart([...cart, service]);
+      localStorage.setItem("cart", JSON.stringify([...cart, service]));
     }
   }
 
@@ -40,7 +39,7 @@ export const ServicesForm = ({ services, setServices }) => {
       </div>
       <ul className="added-services">
         {
-          services.map(service => {
+          cart.map(service => {
             return <li key={ service.service_id } >{ service.service_name }<span><FontAwesomeIcon icon={ faTrash } /></span></li>
           })
         }
