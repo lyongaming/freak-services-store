@@ -20,7 +20,7 @@ export const InvoiceModal = ({ cart, show, showModal }) => {
         <div className="modal__content">
           <img src="logo.png" alt="aaaaa" className="modal_img" />
 
-          <h1 className="modal__title">Service Selected</h1>
+          <h1 className="modal__title">Services Selected</h1>
           <h1 className="modal__title">{ 
             cart.reduce((amount, service) => (
               amount + service.service_cost
