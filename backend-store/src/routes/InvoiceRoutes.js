@@ -1,8 +1,10 @@
 const router = require("express").Router();
-const { getInvoices, createInvoice } = require("../controllers/InvoiceController");
+const bodyParser = require("body-parser");
 
-router.get("/", getInvoices);
+const { createInvoice } = require("../controllers/InvoiceController");
 
-router.post("/", createInvoice);
+const jsonParser = bodyParser.json();
+
+router.post("/", jsonParser, createInvoice);
 
 module.exports = router;

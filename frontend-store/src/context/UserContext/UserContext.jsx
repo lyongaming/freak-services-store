@@ -1,6 +1,7 @@
 import React, { createContext, useState } from "react";
 
 const defaultUser = {
+    id: "",
     name: "Nyx",
     phone: "+000 00000000000",
     email: "josem2740@gmail.com"

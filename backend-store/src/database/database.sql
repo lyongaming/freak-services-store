@@ -1,7 +1,7 @@
 CREATE TABLE invoices (
     invoice_id uuid DEFAULT uuid_generate_v4(),
     user_id uuid,
-    services_bought VARCHAR[40] NOT NULL,
+    services_bought VARCHAR[40][] NOT NULL,
     total_amount NUMERIC(5,2) NOT NULL,
     PRIMARY KEY(invoice_id),
     CONSTRAINT fk_user
