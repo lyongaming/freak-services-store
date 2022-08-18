@@ -22,9 +22,19 @@ export const ServicesForm = ({ cart, setCart }) => {
     if(input) {
       const response = await fetch(`http://localhost:8080/services/${input}`)
       const service = await response.json();
-      setCart([...cart, service]);
+      setCart([...cart, {
+        ...service,
+        service_id: `${service.service_id + Math.random() + 10}`
+      }]);
       localStorage.setItem("cart", JSON.stringify([...cart, service]));
     }
+  }
+
+  const removeService = async(id) => {
+    let currentCart = [...cart];
+    currentCart = currentCart.filter(service => service.service_id !== id);
+    setCart(currentCart);
+    localStorage.setItem("cart", JSON.stringify(currentCart));
   }
 
   return (
@@ -40,7 +50,14 @@ export const ServicesForm = ({ cart, setCart }) => {
       <ul className="added-services">
         {
           cart.map(service => {
-            return <li key={ service.service_id } >{ service.service_name }<span><FontAwesomeIcon icon={ faTrash } /></span></li>
+            return (
+              <li key={ service.service_id } id={ service.service_id }>
+                { service.service_name }
+                <span onClick={ removeService.bind(this, service.service_id) } >
+                  <FontAwesomeIcon icon={ faTrash } />
+                </span>
+              </li>
+            )
           })
         }
       </ul>

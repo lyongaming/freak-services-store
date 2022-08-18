@@ -8,11 +8,6 @@ export const Services = () => {
     let services = data;
     services = services ? services : [];
 
-    // if (services) {
-    //     console.log(services);
-    //     localStorage.setItem("services", services);
-    // }
-
     if(error) {
         alert(error);
     }
