@@ -21,9 +21,20 @@ export const InvoiceModal = ({ cart, show, showModal }) => {
           <img src="logo.png" alt="aaaaa" className="modal_img" />
 
           <h1 className="modal__title">Service Selected</h1>
-          <h1 className="modal__title">500$</h1>
+          <h1 className="modal__title">{ 
+            cart.reduce((amount, service) => (
+              amount + service.service_cost
+            ), 0) 
+          }
+          </h1>
           <div className="selected-services_container">
-            <ul className="selected-services"><li>Service</li></ul>
+            <ul className="selected-services">
+              {
+                cart.map(service => (
+                  <li key={ service.service_id }>{ service.service_name }</li>
+                ))
+              }
+            </ul>
           </div>
 
           <button className="modal__button">
