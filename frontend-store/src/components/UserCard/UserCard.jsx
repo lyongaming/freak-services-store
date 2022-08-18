@@ -1,4 +1,7 @@
 import React from "react";
+import { useContext } from "react";
+
+import { UserContext } from "../../context";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAt, faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -6,6 +9,9 @@ import { faAt, faPhone } from "@fortawesome/free-solid-svg-icons";
 import "./UserCard.css";
 
 export const UserCard = () => {
+
+  const { user } = useContext(UserContext);
+
   return (
     <div className="cards">
       <div className="imgbox">
@@ -13,19 +19,18 @@ export const UserCard = () => {
       </div>
       <div className="content">
         <div className="details">
-          <h2>
-            Nyx
+            <h2>
+              { user.name }
             <br />
-            <span>0000-0000-0001</span>
           </h2>
           <ul className="social_icons">
             <li>
               <FontAwesomeIcon icon={faPhone} className="icon" />
-              <span>+000 00000000000</span>
+              <span>{ user.phone }</span>
             </li>
             <li>
               <FontAwesomeIcon icon={faAt} className="icon" />
-              <span>josem2740gmail.com</span>
+              <span>{ user.email }</span>
             </li>
           </ul>
         </div>
