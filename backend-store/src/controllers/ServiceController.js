@@ -1,5 +1,5 @@
 const { response } = require("express");
-const { getServiceByName } = require("../models/ServiceModel");
+const { getServiceByName, getNames } = require("../models/ServiceModel");
 
 const getService = async(req, res = response) => {
 
@@ -8,6 +8,11 @@ const getService = async(req, res = response) => {
 
 };
 
+const getServicesNames = async(req, res = response) => {
+    await getNames(res);
+}
+
 module.exports = {
-    getService
+    getService,
+    getServicesNames
 }

@@ -9,6 +9,13 @@ const getServiceByName = async(name, response) => {
     
 }
 
+const getNames = async(response) => {
+    await db.query(queries.getServicesNames, [], (err, result) => {
+        response.json(result.rows);
+    });
+}
+
 module.exports = {
-    getServiceByName
+    getServiceByName,
+    getNames
 }
