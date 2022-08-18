@@ -2,10 +2,21 @@ import React from "react";
 
 import "./InvoiceModal.css";
 
-export const InvoiceModal = () => {
+export const InvoiceModal = ({ cart, show, showModal }) => {
+
+  const classes = ["modal-container"];
+
+  if(show) {
+    classes.push("show-modal");
+  }
+
+  const hideModal = () => {
+    showModal(false);
+  }
+
   return (
     <section className="modal">
-      <div className="modal-container" id="modal-container">
+      <div className={ classes.join(" ") } id="modal-container">
         <div className="modal__content">
           <img src="logo.png" alt="aaaaa" className="modal_img" />
 
@@ -18,7 +29,7 @@ export const InvoiceModal = () => {
           <button className="modal__button">
             shop confirmed
           </button>
-          <button className="modal__button-link close-modal">
+          <button className="modal__button-link close-modal" onClick={ hideModal } >
             Cancel process
           </button>
         </div>

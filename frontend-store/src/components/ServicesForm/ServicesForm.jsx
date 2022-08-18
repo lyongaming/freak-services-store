@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { Services } from "./Services/Services";
 
@@ -8,7 +8,7 @@ import "./ServicesForm.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faShoppingCart, faTrash } from "@fortawesome/free-solid-svg-icons";
 
-export const ServicesForm = ({ cart, setCart }) => {
+export const ServicesForm = ({ cart, setCart, changeShowModal }) => {
 
   const [input, setInput] = useState("");
 
@@ -42,6 +42,10 @@ export const ServicesForm = ({ cart, setCart }) => {
     localStorage.setItem("cart", JSON.stringify([]));
   }
 
+  const showModal = () => {
+    changeShowModal(true);
+  }
+
   return (
     <div className="service-form">
       <header>Services</header>
@@ -70,6 +74,7 @@ export const ServicesForm = ({ cart, setCart }) => {
         <button
           style={{ "--clr": "rgb(16,124,248)" }}
           id="open-modal"
+          onClick={ showModal }
         >
           <FontAwesomeIcon icon={faShoppingCart} />
         </button>

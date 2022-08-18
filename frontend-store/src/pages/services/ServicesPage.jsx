@@ -8,6 +8,7 @@ import "./ServicePage.css";
 export const ServicesPage = () => {
 
   const [cart, setCart] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const currentCart = JSON.parse(localStorage.getItem("cart"));
@@ -21,8 +22,8 @@ export const ServicesPage = () => {
       <div className="service-page_container">
         <UserCard />
       </div>
-      <ServicesForm cart={ cart } setCart={ setCart } />
-      <InvoiceModal />
+      <ServicesForm cart={ cart } setCart={ setCart } changeShowModal={ setShowModal } />
+      <InvoiceModal cart={ cart } show={ showModal } showModal={ setShowModal }  />
     </>
   );
 };
